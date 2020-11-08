@@ -1,0 +1,33 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">&lt/&gt CodePaste</a>
+  <a class="navbar-nav ml-auto" data-toggle="modal" data-target="#save-file-modal">
+    <i class="fas fa-save fa-2x"></i>
+  </a>
+  &nbsp &nbsp
+  <a href="" class="navbar-nav ml-0">
+    <i class="fas fa-user fa-2x"></i>
+  </a>
+</nav>
+<form spellcheck="false" id="snippet">
+  <textarea name="code" placeholder="Your code here..." id="code-area">{{code}}</textarea>
+  <div class="modal fade" id="save-file-modal" tabindex="-1" role="dialog" aria-labelledby="save-file-modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content save-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="saving-snippet">Saving Snippet...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input name="snippetName" type="text" placeholder="Snippet name" name="filename" id="snippetName">
+        </div>
+        <div class="modal-footer">
+          <a type="button" onclick="copyLink()" id="copy-button" class="save-modal-button hidden">Copy Link</a>
+          <button type="submit" id="save-button" class="save-modal-button">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
